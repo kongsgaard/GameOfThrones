@@ -2,6 +2,7 @@
 *.meta
 Temp/
 Library/
+Library/*
 Obj/
 Build
 sysinfo.txt
