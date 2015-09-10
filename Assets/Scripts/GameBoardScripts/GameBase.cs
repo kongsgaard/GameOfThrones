@@ -88,8 +88,11 @@ public class GameBase : MonoBehaviour {
 
 
 		#region Houses are created from the Selected Houses in HouseSelection level
-		foreach (HouseSelect hs in HouseSelectList.houseSelectList) 
-		{
+        /*
+        List<HouseSelect> houseSelectList_fromHouseSelect = HouseSelectList.houseSelectList;
+
+        foreach (HouseSelect hs in houseSelectList_fromHouseSelect) 
+        {
 			if (hs.House == "Stark") 
 			{
 				House Stark = new House(HouseCharacter.Stark, StarkTerritory, null, 15, 5, hs.gp);
@@ -121,10 +124,12 @@ public class GameBase : MonoBehaviour {
 				HouseList.Add(Martell);
 			}
 		}
+        */
 		#endregion
 
 		#region myHouse set
-		foreach (HouseSelect hs in HouseSelectList.houseSelectList) 
+        /*
+        foreach (HouseSelect hs in houseSelectList_fromHouseSelect) 
 		{
 			if (hs.gp._player == Network.player) 
 			{
@@ -157,6 +162,7 @@ public class GameBase : MonoBehaviour {
 				}
 			}
 		}
+        */
 		#endregion
 
 		/* Test code! */
