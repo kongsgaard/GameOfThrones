@@ -3,6 +3,7 @@
 Temp/
 Library/
 Library/*
+[Ll]ibrary/
 Obj/
 Build
 sysinfo.txt
