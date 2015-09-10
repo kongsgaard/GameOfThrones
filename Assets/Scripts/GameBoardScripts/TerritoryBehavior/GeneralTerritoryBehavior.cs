@@ -61,11 +61,10 @@ public class GeneralTerritoryBehavior : TerritoryBehaviorObserver {
 		RenderedOrderToken.GetComponent<Rigidbody>().useGravity = false;
 
 		RenderedOrderToken.AddComponent<MeshRenderer>();
-		RenderedOrderToken.GetComponent<Renderer>().castShadows = true;
 		RenderedOrderToken.GetComponent<Renderer>().receiveShadows = true;
 
 		RenderedOrderToken.AddComponent<MeshFilter>();
-		RenderedOrderToken.GetComponent<MeshFilter>().mesh = (Mesh)((GameObject)Resources.Load("Graphics/Models/Other/OrderToken")).GetComponent<MeshFilter>().mesh;
+		RenderedOrderToken.GetComponent<MeshFilter>().sharedMesh = (Mesh)((GameObject)Resources.Load("Graphics/Models/Other/OrderToken")).GetComponent<MeshFilter>().sharedMesh;
 
 		string MaterialLoad = "Graphics/OrderTokenMaterials/";
 		if (myTerritory.Owner.HouseCharacter == HouseCharacter.Baratheon)
@@ -160,26 +159,25 @@ public class GeneralTerritoryBehavior : TerritoryBehaviorObserver {
 
 		RenderedUnits[i].AddComponent<MeshRenderer>();
 		RenderedUnits[i].AddComponent<MeshFilter>();
-		RenderedUnits[i].GetComponent<Renderer>().castShadows = true;
 		RenderedUnits[i].GetComponent<Renderer>().receiveShadows = true;
 
 
 
 		if (U.Type == UnitType.Footman)
 		{
-			RenderedUnits[i].GetComponent<MeshFilter>().mesh = ((GameObject)Resources.Load("Graphics/Models/Units/Footman")).GetComponent<MeshFilter>().mesh;
+			RenderedUnits[i].GetComponent<MeshFilter>().sharedMesh = ((GameObject)Resources.Load("Graphics/Models/Units/Footman")).GetComponent<MeshFilter>().sharedMesh;
 		}
 		else if (U.Type == UnitType.Ship)
 		{
-			RenderedUnits[i].GetComponent<MeshFilter>().mesh = ((GameObject)Resources.Load("Graphics/Models/Units/Ship")).GetComponent<MeshFilter>().mesh;
+			RenderedUnits[i].GetComponent<MeshFilter>().sharedMesh = ((GameObject)Resources.Load("Graphics/Models/Units/Ship")).GetComponent<MeshFilter>().sharedMesh;
 		}
 		else if (U.Type == UnitType.Knight)
 		{
-			RenderedUnits[i].GetComponent<MeshFilter>().mesh = ((GameObject)Resources.Load("Graphics/Models/Units/Knight")).GetComponent<MeshFilter>().mesh;
+			RenderedUnits[i].GetComponent<MeshFilter>().sharedMesh = ((GameObject)Resources.Load("Graphics/Models/Units/Knight")).GetComponent<MeshFilter>().sharedMesh;
 		}
 		else if (U.Type == UnitType.SiegeTower)
 		{
-			RenderedUnits[i].GetComponent<MeshFilter>().mesh = ((GameObject)Resources.Load("Graphics/Models/Units/SiegeTower")).GetComponent<MeshFilter>().mesh;
+			RenderedUnits[i].GetComponent<MeshFilter>().sharedMesh = ((GameObject)Resources.Load("Graphics/Models/Units/SiegeTower")).GetComponent<MeshFilter>().sharedMesh;
 		}
 
 
