@@ -57,6 +57,7 @@ public class FeifdomInfluenceTrackBehavior : InfluenceTrackBehaviorObserver
             if (myTrack.ReturnHouseAtPosition(i) != null)
             {
                 GameObject RenderedTrackIcon = new GameObject();
+                RenderedTrackIcon.name = myTrack.ReturnHouseAtPosition(i).HouseCharacter.ToString() + myTrack.ToString();
 
                 RenderedTrackIcon.AddComponent<MeshRenderer>();
                 //RenderedTrackIcon.GetComponent<Renderer>().castShadows = true;

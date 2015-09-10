@@ -56,6 +56,8 @@ public class IronThroneInfluenceTrackBehavior : InfluenceTrackBehaviorObserver {
             {
                 GameObject RenderedTrackIcon = new GameObject();
 
+                RenderedTrackIcon.name = myTrack.ReturnHouseAtPosition(i).HouseCharacter.ToString() + myTrack.ToString();
+
                 RenderedTrackIcon.AddComponent<MeshRenderer>();
                 //RenderedTrackIcon.GetComponent<Renderer>().castShadows = true;
                 RenderedTrackIcon.GetComponent<Renderer>().receiveShadows = true;

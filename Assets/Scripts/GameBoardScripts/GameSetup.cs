@@ -199,7 +199,6 @@ public class GameSetup : MonoBehaviour {
         GameBase.supplyTrack.SetSupplyForAllBasedOnTerritory();
 
         GameBase.wildlingTrack.NotifyValueChange();
-        GameBase.IronThroneTrack.TrackValuechanged();
         Destroy(this.gameObject);
 	}
 	
