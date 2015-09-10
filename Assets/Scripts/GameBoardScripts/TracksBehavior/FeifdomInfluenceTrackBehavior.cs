@@ -59,14 +59,14 @@ public class FeifdomInfluenceTrackBehavior : InfluenceTrackBehaviorObserver
                 GameObject RenderedTrackIcon = new GameObject();
 
                 RenderedTrackIcon.AddComponent<MeshRenderer>();
-                RenderedTrackIcon.GetComponent<Renderer>().castShadows = true;
+                //RenderedTrackIcon.GetComponent<Renderer>().castShadows = true;
                 RenderedTrackIcon.GetComponent<Renderer>().receiveShadows = true;
 
                 RenderedTrackIcon.AddComponent<Rigidbody>();
                 RenderedTrackIcon.GetComponent<Rigidbody>().useGravity = false;
 
                 RenderedTrackIcon.AddComponent<MeshFilter>();
-                RenderedTrackIcon.GetComponent<MeshFilter>().mesh = (Mesh)((GameObject)Resources.Load("Graphics/Models/Track/Influence")).GetComponent<MeshFilter>().mesh;
+                RenderedTrackIcon.GetComponent<MeshFilter>().sharedMesh = (Mesh)((GameObject)Resources.Load("Graphics/Models/Track/Influence")).GetComponent<MeshFilter>().sharedMesh;
 
                 string MaterialLoad = "Graphics/TrackMaterials/";
 

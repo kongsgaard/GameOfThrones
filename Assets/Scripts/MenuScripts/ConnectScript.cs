@@ -196,7 +196,8 @@ public class ConnectScript : MonoBehaviour {
 	[RPC]
 	void Clients_playerConnected(NetworkPlayer np, string Nickname) 
 	{
-		GamePlayer currentGP = new GamePlayer(np, Nickname);
+		GamePlayer currentGP = new GamePlayer(Nickname, playerType.player);
+        currentGP._player = np;
 		GamePlayers.Add(currentGP);
 		if (np == Network.player) 
 		{

@@ -33,6 +33,7 @@ public class WildlingTrackBehavior : WildlingTrackBehaviorObserver {
         mySubject = GameBase.wildlingTrack;
         mySubject.DefineObserver(this);
         mySubject.InitialObserverCall();
+        Destroy(RenderedWildlingIcon);
 	}
 
     public override void WildlingTrackValueChanged(int Value)
@@ -52,7 +53,7 @@ public class WildlingTrackBehavior : WildlingTrackBehaviorObserver {
         RenderedWildlingIcon.GetComponent<Rigidbody>().useGravity = false;
 
         RenderedWildlingIcon.AddComponent<MeshRenderer>();
-        RenderedWildlingIcon.GetComponent<Renderer>().castShadows = true;
+        //RenderedWildlingIcon.GetComponent<Renderer>().castShadows = true;
         RenderedWildlingIcon.GetComponent<Renderer>().receiveShadows = true;
 
         RenderedWildlingIcon.AddComponent<MeshFilter>().sharedMesh = (Mesh)((GameObject)Resources.Load("Graphics/Models/Track/WildlingIcon")).GetComponent<MeshFilter>().sharedMesh;

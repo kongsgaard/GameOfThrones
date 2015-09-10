@@ -249,11 +249,11 @@ public class SupplyTrackBehavior : SupplyTrackBehaviorObserver {
             RenderIcon.GetComponent<Rigidbody>().useGravity = false;
 
             RenderIcon.AddComponent<MeshRenderer>();
-            RenderIcon.GetComponent<Renderer>().castShadows = true;
+            //RenderIcon.GetComponent<Renderer>().castShadows = true;
             RenderIcon.GetComponent<Renderer>().receiveShadows = true;
 
             RenderIcon.AddComponent<MeshFilter>();
-            RenderIcon.GetComponent<MeshFilter>().mesh = (Mesh)((GameObject)Resources.Load("Graphics/Models/Track/SupplyIcon")).GetComponent<MeshFilter>().mesh;
+            RenderIcon.GetComponent<MeshFilter>().sharedMesh = (Mesh)((GameObject)Resources.Load("Graphics/Models/Track/SupplyIcon")).GetComponent<MeshFilter>().sharedMesh;
 
             string MaterialLoad = "Graphics/TrackMaterials/";
             if (supplyTrack.AllSupplyTracks[Position][i].HouseCharacter == HouseCharacter.Baratheon) 

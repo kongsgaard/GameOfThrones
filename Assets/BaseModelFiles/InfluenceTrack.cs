@@ -9,7 +9,7 @@ public class InfluenceTrackSubject
 		myObserver = obs;
 	}
 
-	protected void TrackValuechanged() 
+	public void TrackValuechanged() 
 	{
 		if (myObserver != null) 
 		{

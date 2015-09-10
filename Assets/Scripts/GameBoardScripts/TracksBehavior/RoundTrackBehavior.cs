@@ -29,13 +29,12 @@ public class RoundTrackBehavior : RoundTrackBehaviorObserver {
 
 		TrackIcon.AddComponent<MeshRenderer>();
 		TrackIcon.GetComponent<Renderer>().receiveShadows = true;
-		TrackIcon.GetComponent<Renderer>().castShadows = true;
 
 		TrackIcon.AddComponent<Rigidbody>();
 		TrackIcon.GetComponent<Rigidbody>().useGravity = false;
 
 		TrackIcon.AddComponent<MeshFilter>();
-		TrackIcon.GetComponent<MeshFilter>().mesh = (Mesh)((GameObject)Resources.Load("Graphics/Models/Track/RoundIcon")).GetComponent<MeshFilter>().mesh;
+		TrackIcon.GetComponent<MeshFilter>().sharedMesh = (Mesh)((GameObject)Resources.Load("Graphics/Models/Track/RoundIcon")).GetComponent<MeshFilter>().sharedMesh;
 
 		TrackIcon.GetComponent<Renderer>().material = (Material)Resources.Load("Graphics/TrackMaterials/RoundIcon");
 

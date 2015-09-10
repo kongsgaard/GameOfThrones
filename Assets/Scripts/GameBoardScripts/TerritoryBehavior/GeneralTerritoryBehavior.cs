@@ -24,17 +24,18 @@ public class GeneralTerritoryBehavior : TerritoryBehaviorObserver {
 	public override void UpdateUnits()
 	{
 		//Change to units happened, destroy the old ones
-		foreach (GameObject obj in RenderedUnits)
-		{
-			Destroy(obj);
-		}
-
-		//Render the new unit list for the territory
-		for (int i = 0; i < myTerritory.Units.Count; i++)
-		{
-			RenderUnit(myTerritory.Units[i], i);
-		}
-	}
+        foreach (GameObject obj in RenderedUnits)
+        {
+            Destroy(obj);
+        }
+        
+        //Render the new unit list for the territory
+        for (int i = 0; i < myTerritory.Units.Count; i++)
+        {
+            RenderUnit(myTerritory.Units[i], i);
+        }
+        
+    }
 
 	public override void UpdatePowerToken()
 	{
@@ -151,8 +152,9 @@ public class GeneralTerritoryBehavior : TerritoryBehaviorObserver {
 	protected void RenderUnit(Unit U, int i)
 	{
 
-		RenderedUnits[i] = new GameObject();
-        RenderedUnits[i].name = U.Owner.ToString() + U.Type.ToString();
+        GameObject newUnit = new GameObject();
+        RenderedUnits[i] = newUnit;
+        RenderedUnits[i].name = U.Owner.HouseCharacter.ToString() + U.Type.ToString();
 
 		RenderedUnits[i].AddComponent<Rigidbody>();
 		RenderedUnits[i].GetComponent<Rigidbody>().useGravity = false;
@@ -161,7 +163,9 @@ public class GeneralTerritoryBehavior : TerritoryBehaviorObserver {
 		RenderedUnits[i].AddComponent<MeshFilter>();
 		RenderedUnits[i].GetComponent<Renderer>().receiveShadows = true;
 
-
+        RenderedUnits[i].transform.position = UnitPositions[i];
+        RenderedUnits[i].transform.rotation = Quaternion.Euler(270, 0, 0);
+        RenderedUnits[i].transform.localScale = Scale;
 
 		if (U.Type == UnitType.Footman)
 		{
@@ -232,8 +236,7 @@ public class GeneralTerritoryBehavior : TerritoryBehaviorObserver {
 
 		RenderedUnits[i].GetComponent<Renderer>().material = (Material)Resources.Load(MaterialLoad);
 
-		RenderedUnits[i].transform.position = UnitPositions[i];
-		RenderedUnits[i].transform.rotation = Quaternion.Euler(270, 0, 0);
-		RenderedUnits[i].transform.localScale = Scale;
+		
+
 	}
 }
