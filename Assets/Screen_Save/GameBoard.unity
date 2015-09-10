@@ -785,6 +785,7 @@ GameObject:
   - 4: {fileID: 162455070}
   - 33: {fileID: 162455069}
   - 23: {fileID: 162455068}
+  - 114: {fileID: 162455071}
   m_Layer: 0
   m_Name: IronThroneTrack
   m_TagString: Untagged
@@ -835,6 +836,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4591847}
   m_RootOrder: 1
+--- !u!114 &162455071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 162455067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2d4a0e50c4e6bb45a736f9b28884a7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &256109763
 GameObject:
   m_ObjectHideFlags: 0
@@ -994,6 +1006,7 @@ GameObject:
   - 4: {fileID: 304082485}
   - 33: {fileID: 304082484}
   - 23: {fileID: 304082483}
+  - 114: {fileID: 304082486}
   m_Layer: 0
   m_Name: RoundTrack
   m_TagString: Untagged
@@ -1044,6 +1057,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4591847}
   m_RootOrder: 4
+--- !u!114 &304082486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 304082482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 805a976db6f523744a34c54e24c23d6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &320167381
 GameObject:
   m_ObjectHideFlags: 0
@@ -2119,6 +2143,7 @@ GameObject:
   - 4: {fileID: 484235467}
   - 33: {fileID: 484235466}
   - 23: {fileID: 484235465}
+  - 114: {fileID: 484235468}
   m_Layer: 0
   m_Name: FeifdomTrack
   m_TagString: Untagged
@@ -2169,6 +2194,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4591847}
   m_RootOrder: 0
+--- !u!114 &484235468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 484235464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07a77eaf7d1cbb649905bee0729c13a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &516182866
 GameObject:
   m_ObjectHideFlags: 0
@@ -5705,6 +5741,7 @@ GameObject:
   - 4: {fileID: 1053428703}
   - 33: {fileID: 1053428702}
   - 23: {fileID: 1053428701}
+  - 114: {fileID: 1053428704}
   m_Layer: 0
   m_Name: SupplyTrack
   m_TagString: Untagged
@@ -5755,6 +5792,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4591847}
   m_RootOrder: 3
+--- !u!114 &1053428704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1053428700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b5b00cda80341c4198af91b6755ec96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1064081728
 GameObject:
   m_ObjectHideFlags: 0
@@ -6855,6 +6903,45 @@ Transform:
   m_Children: []
   m_Father: {fileID: 817198846}
   m_RootOrder: 8
+--- !u!1 &1320823386
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1320823388}
+  - 114: {fileID: 1320823387}
+  m_Layer: 0
+  m_Name: GameSetup
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1320823387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1320823386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 060c73fcd9086cf4f8ab66a0b367c0e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1320823388
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1320823386}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: .739290833, y: -7.04914474, z: 2.60529757}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
 --- !u!1 &1323481048
 GameObject:
   m_ObjectHideFlags: 0
@@ -8868,6 +8955,7 @@ GameObject:
   - 4: {fileID: 1715799908}
   - 33: {fileID: 1715799907}
   - 23: {fileID: 1715799906}
+  - 114: {fileID: 1715799909}
   m_Layer: 0
   m_Name: KingsCourtTrack
   m_TagString: Untagged
@@ -8918,6 +9006,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4591847}
   m_RootOrder: 2
+--- !u!114 &1715799909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1715799905}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46bd11ce96027644fa4dae3c914c5bb5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1729141359
 GameObject:
   m_ObjectHideFlags: 0
