@@ -55,7 +55,7 @@ public class WildlingTrackBehavior : WildlingTrackBehaviorObserver {
         RenderedWildlingIcon.GetComponent<Renderer>().castShadows = true;
         RenderedWildlingIcon.GetComponent<Renderer>().receiveShadows = true;
 
-        RenderedWildlingIcon.AddComponent<MeshFilter>().mesh = (Mesh)((GameObject)Resources.Load("Graphics/Models/Track/WildlingIcon")).GetComponent<MeshFilter>().mesh;
+        RenderedWildlingIcon.AddComponent<MeshFilter>().sharedMesh = (Mesh)((GameObject)Resources.Load("Graphics/Models/Track/WildlingIcon")).GetComponent<MeshFilter>().sharedMesh;
         RenderedWildlingIcon.GetComponent<Renderer>().material = (Material)Resources.Load("Graphics/TrackMaterials/WildlingIcon");
 
         RenderedWildlingIcon.transform.position = WildlingPosArray[Value / 2];
