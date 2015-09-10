@@ -11,8 +11,8 @@ sysinfo.txt
 /*.csproj
 /*.pidb
 /*.suo
-*.sln
-*.log
+/*.sln
+/*.log
 /*.user
 /*.unityproj
 /*.booproj
