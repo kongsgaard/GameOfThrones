@@ -1,0 +1,17 @@
+Beskriver de klasser modellen for spillet skal indeholde, og hvordan modellen skal virke.
+
+Territory
+
+Unit
+
+House
+
+WildlingCard
+
+WesterosCard
+
+HouseCard
+
+OrderToken
+
+TrackToken

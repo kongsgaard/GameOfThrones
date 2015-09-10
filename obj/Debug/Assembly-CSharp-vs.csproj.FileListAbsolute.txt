@@ -1,0 +1,12 @@
+C:\Users\Emil\Dropbox\Unity\GoT3d\Temp\bin\Debug\Assembly-CSharp.dll
+C:\Users\Emil\Dropbox\Unity\GoT3d\Temp\bin\Debug\Assembly-CSharp.pdb
+C:\Users\Emil\Dropbox\Unity\GoT3d\Temp\bin\Debug\UnityEditor.dll
+C:\Users\Emil\Dropbox\Unity\GoT3d\Temp\bin\Debug\UnityEngine.dll
+C:\Users\Emil\Dropbox\Unity\GoT3d\Temp\bin\Debug\Mono.Cecil.dll
+C:\Users\Emil\Dropbox\Unity\GoT3d\Temp\bin\Debug\nunit.framework.dll
+C:\Users\Emil\Dropbox\Unity\GoT3d\Temp\bin\Debug\Unity.DataContract.dll
+C:\Users\Emil\Dropbox\Unity\GoT3d\Temp\bin\Debug\ICSharpCode.NRefactory.dll
+C:\Users\Emil\Dropbox\Unity\GoT3d\obj\Debug\Assembly-CSharp-vs.csprojResolveAssemblyReference.cache
+C:\Users\Emil\Dropbox\Unity\GoT3d\obj\Debug\Assembly-CSharp.dll
+C:\Users\Emil\Dropbox\Unity\GoT3d\obj\Debug\Assembly-CSharp.pdb
+C:\Users\Emil\Dropbox\Unity\GoT3d\Temp\bin\Debug\UnityEngine.UI.dll

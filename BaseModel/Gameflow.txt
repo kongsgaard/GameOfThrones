@@ -1,0 +1,64 @@
+
+
+Forløkke til runder, 10.
+	if(roundCount > 1)
+	{
+		WesterosePhase()
+	}
+	
+	PlanningPhase()
+	
+	ActionPhase()
+	
+
+WesterosePhase()
+{
+	DrawDeck1();
+	DrawDeck2();
+	DrawDeck3();	
+}
+
+PlanningPhase()
+{
+	while(!PlayerReady)
+	{
+		PlaceAToken()
+	}
+	
+	
+}
+	
+ActionPhase()
+{
+	RaidOrders()
+	MoveOrders()
+}
+
+Raidorders()
+{
+	while(RemainingRaidOrder)
+	{
+		for(i=1; i < 7; i++)
+		{
+			if(ThroneTrack[i].GotRemainingRaidOrder())	//ThroneTrack is a list of houses, in the order of the throne track.
+			{
+				ThroneTrack[i].UseSomeRaidOrder()
+			}
+		}
+	}
+}
+
+MoveOrders()
+{
+	while(RemainingMoveOrders)
+	{
+		for(i=1; i < 7; i++)
+		{
+			if(ThroneTrack[i].GotRemainingMoveOrders())	//ThroneTrack is a list of houses, in the order of the throne track.
+			{
+				ThroneTrack[i].UseSomeMoveOrder()
+			}
+		}
+	}
+}
+

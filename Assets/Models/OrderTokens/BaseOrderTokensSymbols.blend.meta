@@ -1,0 +1,117 @@
+fileFormatVersion: 2
+guid: 960b3d143c608254bb550c47347d6ff8
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: AttackOrderNormal
+    100002: AttackOrderStar
+    100004: AttackOrderWeak
+    100006: //RootNode
+    100008: ColsolidatePowerNormal
+    100010: ColsolidatePowerStar
+    100012: DefenseTokenNormal
+    100014: DefenseTokenStar
+    100016: RaidOrderNormal
+    100018: RaidOrderStar
+    100020: SupportOrderNormal
+    100022: SupportOrderStar
+    400000: AttackOrderNormal
+    400002: AttackOrderStar
+    400004: AttackOrderWeak
+    400006: //RootNode
+    400008: ColsolidatePowerNormal
+    400010: ColsolidatePowerStar
+    400012: DefenseTokenNormal
+    400014: DefenseTokenStar
+    400016: RaidOrderNormal
+    400018: RaidOrderStar
+    400020: SupportOrderNormal
+    400022: SupportOrderStar
+    2300000: AttackOrderNormal
+    2300002: AttackOrderStar
+    2300004: AttackOrderWeak
+    2300006: ColsolidatePowerNormal
+    2300008: ColsolidatePowerStar
+    2300010: DefenseTokenNormal
+    2300012: DefenseTokenStar
+    2300014: RaidOrderNormal
+    2300016: RaidOrderStar
+    2300018: SupportOrderNormal
+    2300020: SupportOrderStar
+    3300000: AttackOrderNormal
+    3300002: AttackOrderStar
+    3300004: AttackOrderWeak
+    3300006: ColsolidatePowerNormal
+    3300008: ColsolidatePowerStar
+    3300010: DefenseTokenNormal
+    3300012: DefenseTokenStar
+    3300014: RaidOrderNormal
+    3300016: RaidOrderStar
+    3300018: SupportOrderNormal
+    3300020: SupportOrderStar
+    4300000: ColsolidatePowerStar
+    4300002: DefenseTokenStar
+    4300004: RaidOrderStar
+    4300006: SupportOrderNormal
+    4300008: AttackOrderStar
+    4300010: AttackOrderWeak
+    4300012: SupportOrderStar
+    4300014: DefenseTokenNormal
+    4300016: RaidOrderNormal
+    4300018: ColsolidatePowerNormal
+    4300020: AttackOrderNormal
+    7400000: Default Take
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 

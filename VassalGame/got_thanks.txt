@@ -1,0 +1,22 @@
+A short word from Guiness:
+
+A Game of Thrones: The Board Game, ©2011 Fantasy Flight Publishing LLC
+
+I'd first like to thank E. Cameron, the guy who did the original work on AGoT to get it online.  Secondly I want to thank Ryan Thompson and Erik Hanus for their continued work on the game before handing the maintenance off to me after our collaborative efforts.  Credit where credit is due, these are the first people who got the module up and running.
+
+All images, card text, and asserts belong as copyrights to the rightful publishers and original authors, and we're lucky to have their innovative minds that led us to such a fun game that combines the great elements of original games like Diplomacy and Risk.
+
+The module's homepage can be found here:
+http://http://www.vassalengine.org/wiki/Module:A_Game_of_Thrones:_The_Board_Game_(Second_Edition)
+
+If you have fun playing this game and have yet to buy a hard copy from Fantasy Flight Games, please support their business in developing similar games by purchasing this and/or other titles from their website:
+http://www.fantasyflightgames.com/
+
+The PDF version of the Rules and FAQ (which many people should read before calling someone else a noob (...you know who you are...) can be found on FFG's support page here:
+http://www.fantasyflightgames.com/edge_minisite_sec.asp?eidm=172&esem=4
+
+Any other questions, comments, suggestions, criticisms about the module, please contact me as I officially maintain it now: kcminn@gmail.com
+
+~Guiness
+
+P.S. A coupld extra thanks go out to Mik, for helping with the new graphics for v2.0 (soon to be released) and to all the people who entertain me by playing a game or two... even the ones I can't understand. :)

@@ -1,0 +1,132 @@
+fileFormatVersion: 2
+guid: 8e2e3e63df812e54288fc7425412fcf4
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: DornishMarches
+    100002: GoT_Board
+    100004: //RootNode
+    100006: OldTown
+    100008: OldTownHarbor
+    100010: PrincesPass
+    100012: RedWyneStraights
+    100014: SaltShore
+    100016: StarFall
+    100018: Sunspear
+    100020: SunspearHarbor
+    100022: TheArbor
+    100024: ThreeTowers
+    100026: WestSummerSea
+    100028: Yronwood
+    400000: DornishMarches
+    400002: GoT_Board
+    400004: //RootNode
+    400006: OldTown
+    400008: OldTownHarbor
+    400010: PrincesPass
+    400012: RedWyneStraights
+    400014: SaltShore
+    400016: StarFall
+    400018: Sunspear
+    400020: SunspearHarbor
+    400022: TheArbor
+    400024: ThreeTowers
+    400026: WestSummerSea
+    400028: Yronwood
+    2300000: DornishMarches
+    2300002: GoT_Board
+    2300004: OldTown
+    2300006: OldTownHarbor
+    2300008: PrincesPass
+    2300010: RedWyneStraights
+    2300012: SaltShore
+    2300014: StarFall
+    2300016: Sunspear
+    2300018: SunspearHarbor
+    2300020: TheArbor
+    2300022: ThreeTowers
+    2300024: WestSummerSea
+    2300026: Yronwood
+    3300000: DornishMarches
+    3300002: GoT_Board
+    3300004: OldTown
+    3300006: OldTownHarbor
+    3300008: PrincesPass
+    3300010: RedWyneStraights
+    3300012: SaltShore
+    3300014: StarFall
+    3300016: Sunspear
+    3300018: SunspearHarbor
+    3300020: TheArbor
+    3300022: ThreeTowers
+    3300024: WestSummerSea
+    3300026: Yronwood
+    4300000: SunspearHarbor
+    4300002: Sunspear
+    4300004: Yronwood
+    4300006: SaltShore
+    4300008: DornishMarches
+    4300010: PrincesPass
+    4300012: StarFall
+    4300014: OldTown
+    4300016: OldTownHarbor
+    4300018: ThreeTowers
+    4300020: RedWyneStraights
+    4300022: TheArbor
+    4300024: WestSummerSea
+    4300026: GoT_Board
+    7400000: Default Take
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
