@@ -81,25 +81,43 @@ using System.Text;
 			UnusedOrderTokens.Add(ot);
 		}
 
-		public void PlaceUnit(Unit U) { UnusedUnits.Remove(U); }
-		public void ReturnUnit(Unit U) { UnusedUnits.Add(U); }
+		public void PlaceUnit(Unit U) 
+        { 
+            UnusedUnits.Remove(U); 
+        }
 
+		public void ReturnUnit(Unit U) 
+        { 
+            UnusedUnits.Add(U); 
+        }
+
+        /* Gamelogic info
+         */ 
 		public void PlaceUnitOnTerritory(Territory T, Unit U) 
 		{
 			UnusedUnits.Remove(U);
 			T.AddUnitToList(U);
 		}
+
+        /* Gamelogic info
+         */ 
 		public void ReturnUnitFromTerritory(Territory T, Unit U) 
 		{
 			UnusedUnits.Add(U);
 			T.RemoveUnitFromList(U);
 		}
 
+        /* Gamelogic info
+         * 
+         */ 
 		public void PlacePowerTokenOnTerritory(Territory T) 
 		{
 			T.ContainsPowerToken = true;
 			PowerTokens = PowerTokens - 1;
 		}
+
+        /* Gamelogic info
+         */ 
 		public void RemovePowerTokenFromTerritory(Territory T) 
 		{
 			T.ContainsPowerToken = false;

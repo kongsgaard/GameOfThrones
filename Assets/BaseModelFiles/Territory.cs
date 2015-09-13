@@ -82,22 +82,32 @@ public abstract class TerritorySubject
 			Barrels = barrels;
 		}
 
-		public void AddUnitToList(Unit U) 
+        /* Gamelogic info
+         * This function shouldn't be called directly. To place a unit on a territory, call the PlaceUnitOnTerritory function in the house class instead. */
+        public void AddUnitToList(Unit U) 
 		{
 			Units.Add(U);
 			NotifyUnitChange();
 		}
+
+        /* Gamelogic info
+         * This function shouldn't be called directly. To place a unit on a territory, call the ReturnUnitFromTerritory function in the house class instead. */
 		public void RemoveUnitFromList(Unit U) 
 		{
 			Units.Remove(U);
 			NotifyUnitChange();
 		}
 
+        /* Gamelogic info
+         * This function shouldn't be called directly. To place an order token on a territory, call the PlaceOrderTokenOnTerritory function in the house class instead. */
 		public void PlaceOrderToken(OrderToken ot) 
 		{
 			PlacedOrderToken = ot;
 			NotifyOrderTokenChanged();
 		}
+
+        /* Gamelogic info
+         * This function shouldn't be called directly. To remove an order token on a territory, call the ReturnOrderTokenFromTerritory function in the house class instead. */
 		public void RemoveOrderToken(OrderToken ot) 
 		{
 			PlacedOrderToken = null;
