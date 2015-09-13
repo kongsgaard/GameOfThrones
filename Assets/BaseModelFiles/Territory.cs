@@ -83,6 +83,22 @@ public abstract class TerritorySubject
 		}
 
         /* Gamelogic info
+         * This function shouldn't be called directly. To place a power token on a territory, call the PlacePowerTokenOnTerritory function in the house class instead. */
+        public void AddPowerToken() 
+        {
+            ContainsPowerToken = true;
+            NotifyPowerTokenChange();
+        }
+
+        /* Gamelogic info
+         * This function shouldn't be called directly. To remove a power token from a territory, call the RemovePowerTokenFromTerritory function in the house class instead. */
+        public void RemovePowerToken() 
+        {
+            ContainsPowerToken = false;
+            NotifyPowerTokenChange();
+        }
+
+        /* Gamelogic info
          * This function shouldn't be called directly. To place a unit on a territory, call the PlaceUnitOnTerritory function in the house class instead. */
         public void AddUnitToList(Unit U) 
 		{

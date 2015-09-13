@@ -84,12 +84,13 @@ public class GameSetup : MonoBehaviour {
 
                 foreach (Territory T in GameBase.TerritoryList)
                 {
-                    if (T.Name == "TheStonyShore") { Stark.PlaceUnitOnTerritory(T, Stark.ReturnSomeFootman()); }
-                    if (T.Name == "Winterfell") { Stark.PlaceUnitOnTerritory(T, Stark.ReturnSomeKnight()); Stark.PlaceUnitOnTerritory(T, Stark.ReturnSomeFootman()); }
+                    
+                    if (T.Name == "TheStonyShore") { Stark.PlaceUnitOnTerritory(T, Stark.ReturnSomeUnitGivenType(UnitType.Footman)); }
+                    if (T.Name == "Winterfell") { Stark.PlaceUnitOnTerritory(T, Stark.ReturnSomeUnitGivenType(UnitType.Knight)); Stark.PlaceUnitOnTerritory(T, Stark.ReturnSomeUnitGivenType(UnitType.Footman)); }
                     if (T.Name == "WinterfellHarbor") { }
-                    if (T.Name == "WhiteHarbor") { Stark.PlaceUnitOnTerritory(T, Stark.ReturnSomeFootman()); }
+                    if (T.Name == "WhiteHarbor") { Stark.PlaceUnitOnTerritory(T, Stark.ReturnSomeUnitGivenType(UnitType.Footman)); }
                     if (T.Name == "WhiteHarborHarbor") { }
-                    if (T.Name == "TheShiveringSea") { Stark.PlaceUnitOnTerritory(T, Stark.ReturnSomeShip()); }
+                    if (T.Name == "TheShiveringSea") { Stark.PlaceUnitOnTerritory(T, Stark.ReturnSomeUnitGivenType(UnitType.Ship)); }
                 }
 
                 GameBase.myHouse = Stark;
@@ -105,9 +106,9 @@ public class GameSetup : MonoBehaviour {
 
                 foreach (Territory T in GameBase.TerritoryList)
                 {
-                    if (T.Name == "Kingswood") { Baratheon.PlaceUnitOnTerritory(T, Baratheon.ReturnSomeFootman()); }
-                    if (T.Name == "ShipbreakerBay") { Baratheon.PlaceUnitOnTerritory(T, Baratheon.ReturnSomeShip()); Baratheon.PlaceUnitOnTerritory(T, Baratheon.ReturnSomeShip()); }
-                    if (T.Name == "Dragonstone") { Baratheon.PlaceUnitOnTerritory(T, Baratheon.ReturnSomeKnight()); Baratheon.PlaceUnitOnTerritory(T, Baratheon.ReturnSomeFootman()); }
+                    if (T.Name == "Kingswood") { Baratheon.PlaceUnitOnTerritory(T, Baratheon.ReturnSomeUnitGivenType(UnitType.Footman)); }
+                    if (T.Name == "ShipbreakerBay") { Baratheon.PlaceUnitOnTerritory(T, Baratheon.ReturnSomeUnitGivenType(UnitType.Ship)); Baratheon.PlaceUnitOnTerritory(T, Baratheon.ReturnSomeUnitGivenType(UnitType.Ship)); }
+                    if (T.Name == "Dragonstone") { Baratheon.PlaceUnitOnTerritory(T, Baratheon.ReturnSomeUnitGivenType(UnitType.Knight)); Baratheon.PlaceUnitOnTerritory(T, Baratheon.ReturnSomeUnitGivenType(UnitType.Footman)); }
                     if (T.Name == "DragonstoneHarbor") { }
                 }
 
@@ -122,10 +123,10 @@ public class GameSetup : MonoBehaviour {
 
                 foreach (Territory T in GameBase.TerritoryList)
                 {
-                    if (T.Name == "Pyke") { Greyjoy.PlaceUnitOnTerritory(T, Greyjoy.ReturnSomeKnight()); Greyjoy.PlaceUnitOnTerritory(T, Greyjoy.ReturnSomeFootman()); }
-                    if (T.Name == "PykeHarbor") { Greyjoy.PlaceUnitOnTerritory(T, Greyjoy.ReturnSomeShip()); }
-                    if (T.Name == "IronmansBay") { Greyjoy.PlaceUnitOnTerritory(T, Greyjoy.ReturnSomeShip()); }
-                    if (T.Name == "GreywaterWatch") { Greyjoy.PlaceUnitOnTerritory(T, Greyjoy.ReturnSomeFootman()); }
+                    if (T.Name == "Pyke") { Greyjoy.PlaceUnitOnTerritory(T, Greyjoy.ReturnSomeUnitGivenType(UnitType.Knight)); Greyjoy.PlaceUnitOnTerritory(T, Greyjoy.ReturnSomeUnitGivenType(UnitType.Footman)); }
+                    if (T.Name == "PykeHarbor") { Greyjoy.PlaceUnitOnTerritory(T, Greyjoy.ReturnSomeUnitGivenType(UnitType.Ship)); }
+                    if (T.Name == "IronmansBay") { Greyjoy.PlaceUnitOnTerritory(T, Greyjoy.ReturnSomeUnitGivenType(UnitType.Ship)); }
+                    if (T.Name == "GreywaterWatch") { Greyjoy.PlaceUnitOnTerritory(T, Greyjoy.ReturnSomeUnitGivenType(UnitType.Footman)); }
                 }
 
                 GameBase.IronThroneTrack.InsertHouseAtPosition(5, Greyjoy);
@@ -139,10 +140,10 @@ public class GameSetup : MonoBehaviour {
 
                 foreach (Territory T in GameBase.TerritoryList)
                 {
-                    if (T.Name == "TheGoldenSound") { Lannister.PlaceUnitOnTerritory(T, Lannister.ReturnSomeShip()); }
-                    if (T.Name == "Lannisport") { Lannister.PlaceUnitOnTerritory(T, Lannister.ReturnSomeKnight()); Lannister.PlaceUnitOnTerritory(T, Lannister.ReturnSomeFootman()); }
+                    if (T.Name == "TheGoldenSound") { Lannister.PlaceUnitOnTerritory(T, Lannister.ReturnSomeUnitGivenType(UnitType.Ship)); }
+                    if (T.Name == "Lannisport") { Lannister.PlaceUnitOnTerritory(T, Lannister.ReturnSomeUnitGivenType(UnitType.Knight)); Lannister.PlaceUnitOnTerritory(T, Lannister.ReturnSomeUnitGivenType(UnitType.Footman)); }
                     if (T.Name == "LannisportHarbor") { }
-                    if (T.Name == "StoneySept") { Lannister.PlaceUnitOnTerritory(T, Lannister.ReturnSomeFootman()); }
+                    if (T.Name == "StoneySept") { Lannister.PlaceUnitOnTerritory(T, Lannister.ReturnSomeUnitGivenType(UnitType.Footman)); }
                 }
 
                 GameBase.IronThroneTrack.InsertHouseAtPosition(2, Lannister);
@@ -156,9 +157,9 @@ public class GameSetup : MonoBehaviour {
 
                 foreach (Territory T in GameBase.TerritoryList)
                 {
-                    if (T.Name == "RedwyneStraights") { Tyrell.PlaceUnitOnTerritory(T, Tyrell.ReturnSomeShip()); }
-                    if (T.Name == "Highgarden") { Tyrell.PlaceUnitOnTerritory(T, Tyrell.ReturnSomeKnight()); Tyrell.PlaceUnitOnTerritory(T, Tyrell.ReturnSomeFootman()); }
-                    if (T.Name == "DornishMarches") { Tyrell.PlaceUnitOnTerritory(T, Tyrell.ReturnSomeFootman()); }
+                    if (T.Name == "RedwyneStraights") { Tyrell.PlaceUnitOnTerritory(T, Tyrell.ReturnSomeUnitGivenType(UnitType.Ship)); }
+                    if (T.Name == "Highgarden") { Tyrell.PlaceUnitOnTerritory(T, Tyrell.ReturnSomeUnitGivenType(UnitType.Knight)); Tyrell.PlaceUnitOnTerritory(T, Tyrell.ReturnSomeUnitGivenType(UnitType.Footman)); }
+                    if (T.Name == "DornishMarches") { Tyrell.PlaceUnitOnTerritory(T, Tyrell.ReturnSomeUnitGivenType(UnitType.Footman)); }
                 }
 
                 GameBase.IronThroneTrack.InsertHouseAtPosition(6, Tyrell);
@@ -172,10 +173,10 @@ public class GameSetup : MonoBehaviour {
 
                 foreach (Territory T in GameBase.TerritoryList)
                 {
-                    if (T.Name == "SeaOfDorne") { Martell.PlaceUnitOnTerritory(T, Martell.ReturnSomeShip()); }
-                    if (T.Name == "Sunspear") { Martell.PlaceUnitOnTerritory(T, Martell.ReturnSomeKnight()); Martell.PlaceUnitOnTerritory(T, Martell.ReturnSomeFootman()); }
+                    if (T.Name == "SeaOfDorne") { Martell.PlaceUnitOnTerritory(T, Martell.ReturnSomeUnitGivenType(UnitType.Ship)); }
+                    if (T.Name == "Sunspear") { Martell.PlaceUnitOnTerritory(T, Martell.ReturnSomeUnitGivenType(UnitType.Knight)); Martell.PlaceUnitOnTerritory(T, Martell.ReturnSomeUnitGivenType(UnitType.Footman)); }
                     if (T.Name == "SunspearHarbor") { }
-                    if (T.Name == "SaltShore") { Martell.PlaceUnitOnTerritory(T, Martell.ReturnSomeFootman()); }
+                    if (T.Name == "SaltShore") { Martell.PlaceUnitOnTerritory(T, Martell.ReturnSomeUnitGivenType(UnitType.Footman)); }
                 }
 
                 GameBase.IronThroneTrack.InsertHouseAtPosition(4, Martell);

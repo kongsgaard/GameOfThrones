@@ -81,17 +81,76 @@ using System.Text;
 			UnusedOrderTokens.Add(ot);
 		}
 
-		public void PlaceUnit(Unit U) 
+        /* Not used on gamelogic level.
+         * Used to inform UI of changes
+         * 
+         * --Missing--
+         *  Needs to setup observer pattern of player hand
+         * */
+        public void PlaceUnit(Unit U) 
         { 
             UnusedUnits.Remove(U); 
         }
 
-		public void ReturnUnit(Unit U) 
+        /* Not used on Gamelogic level.
+         * Used to inform UI of changes
+         * 
+         * --Missing--
+         *  Needs to setup observer pattern of player hand
+         * */
+        public void ReturnUnit(Unit U) 
         { 
             UnusedUnits.Add(U); 
         }
 
-        /* Gamelogic info
+        /* Used on gamelogic level
+         * If a power token should be added to the unused pile, but not removed from the player power token pile
+         * 
+         * --Missing--
+         * Setup 
+         * */
+        public void AddPowerTokenToUnusedPile() 
+        {
+            UnusedPowerTokens = UnusedPowerTokens + 1;
+        }
+
+        /* Not used on Gamelogic level.
+         * Used to inform UI of changes
+         * 
+         * --Missing--
+         *  Setup and notify player hand class that power token is gained + one removed from unused.
+         * */
+        public void GainOnePowerToken() 
+        {
+            PowerTokens = PowerTokens + 1;
+            UnusedPowerTokens = UnusedPowerTokens - 1;
+        }
+
+        /* Not used on Gamelogic level.
+         * When power token is removed from the hand, and put into the unused power token pile.
+         * 
+         * --Missing--
+         * Setup and notify player hand class that power token is removed + one added to unused.
+         * */
+        public void LoseOnePowerToken_ToUnused() 
+        {
+            PowerTokens = PowerTokens - 1;
+            UnusedPowerTokens = UnusedPowerTokens + 1;
+        }
+
+        /* Not used on GameLogic level
+         * When power token is removed from the hand, but not put into the unused power pile. (When placed on territory)
+         * 
+         * --Missing--
+         * Setup and notify player hand class that power token is removed.
+         * */
+        public void LoseOnePowerToken_ToTerritory()
+        {
+            PowerTokens = PowerTokens - 1;
+        }
+
+        /* Used on gamelogic level
+         * Use this function to place a unit on on a territory
          */ 
 		public void PlaceUnitOnTerritory(Territory T, Unit U) 
 		{
@@ -99,7 +158,8 @@ using System.Text;
 			T.AddUnitToList(U);
 		}
 
-        /* Gamelogic info
+        /* Used on gamelogic level
+         * Use this function to remove a unit from a territory
          */ 
 		public void ReturnUnitFromTerritory(Territory T, Unit U) 
 		{
@@ -107,16 +167,21 @@ using System.Text;
 			T.RemoveUnitFromList(U);
 		}
 
-        /* Gamelogic info
+        /* Used on gamelogic level
+         * Use this function to place a power token on a territory
          * 
+         * UI info
+         * --Missing--
+         * Setup observer pattern/call with the player hand class
          */ 
 		public void PlacePowerTokenOnTerritory(Territory T) 
 		{
 			T.ContainsPowerToken = true;
-			PowerTokens = PowerTokens - 1;
+            LoseOnePowerToken_ToTerritory();
 		}
 
-        /* Gamelogic info
+        /* Used on gamelogic level
+         * Use this function to remove a power token from a territory
          */ 
 		public void RemovePowerTokenFromTerritory(Territory T) 
 		{
@@ -124,111 +189,135 @@ using System.Text;
 			UnusedPowerTokens = UnusedPowerTokens + 1;
 		}
 
-		public Unit ReturnSomeFootman() 
-		{
-			Unit u = null;
-			foreach (Unit U in UnusedUnits) 
-			{
-				if (U.Type == UnitType.Footman) 
-				{
-					u = U;
-					break;
-				}
-			}
-			return u;
-		}
-		public Unit ReturnSomeKnight()
-		{
-			Unit u = null;
-			foreach (Unit U in UnusedUnits)
-			{
-				if (U.Type == UnitType.Knight)
-				{
-					u = U;
-					break;
-				}
-			}
-			return u;
-		}
-		public Unit ReturnSomeSiegeTower()
-		{
-			Unit u = null;
-			foreach (Unit U in UnusedUnits)
-			{
-				if (U.Type == UnitType.SiegeTower)
-				{
-					u = U;
-					break;
-				}
-			}
-			return u;
-		}
-		public Unit ReturnSomeShip()
-		{
-			Unit u = null;
-			foreach (Unit U in UnusedUnits)
-			{
-				if (U.Type == UnitType.Ship)
-				{
-					u = U;
-					break;
-				}
-			}
-			return u;
-		}
+        /* Not used on gamelogic level
+         * Request a unit from the player hand. If null is returned, no unit of that type is left.
+         * */
+        public Unit ReturnSomeUnitGivenType(UnitType type) 
+        {
+            Unit u = null;
 
+            if (type == UnitType.Footman) 
+            {
+                foreach (Unit U in UnusedUnits)
+                {
+                    if (U.Type == UnitType.Footman)
+                    {
+                        u = U;
+                        break;
+                    }
+                }
+                return u;
+            }
+            else if (type == UnitType.Knight) 
+            {
+                foreach (Unit U in UnusedUnits)
+                {
+                    if (U.Type == UnitType.Knight)
+                    {
+                        u = U;
+                        break;
+                    }
+                }
+                return u;
+            }
+            else if (type == UnitType.Ship) 
+            {
+                foreach (Unit U in UnusedUnits)
+                {
+                    if (U.Type == UnitType.Ship)
+                    {
+                        u = U;
+                        break;
+                    }
+                }
+                return u;
+                
+            }
+            else if (type == UnitType.SiegeTower) 
+            {
+                foreach (Unit U in UnusedUnits)
+                {
+                    if (U.Type == UnitType.SiegeTower)
+                    {
+                        u = U;
+                        break;
+                    }
+                }
+                return u;
+            }
+            return u;
+        }
+
+        /* Used on gamelogic level
+         * Collect power tokens from a territory, not based on a consolidate token
+         */
 		public void CollectPowerFromTerritory(Territory T) 
 		{
-			int PowerTokensToGain = 0;
-			if (UnusedPowerTokens < T.PowerIcons)
-			{
-				PowerTokensToGain = UnusedPowerTokens;
-			}
-			else 
-			{
-				PowerTokensToGain = T.PowerIcons;
-			}
-			PowerTokens = PowerTokens + PowerTokensToGain;
-			UnusedPowerTokens = UnusedPowerTokens - PowerTokensToGain;
-		}
-		public void CollectPowerFromTerritoryWithToken(Territory T) 
-		{
-			int PowerTokensToGain = 0;
-			if (UnusedPowerTokens < T.PowerIcons + 1)
-			{
-				PowerTokensToGain = UnusedPowerTokens;
-			}
-			else
-			{
-				PowerTokensToGain = T.PowerIcons + 1;
-			}
-			PowerTokens = PowerTokens + PowerTokensToGain;
-			UnusedPowerTokens = UnusedPowerTokens - PowerTokensToGain;
+            int PowerTokensToGain = T.PowerIcons;
+
+            for (int n = 0; n < PowerTokensToGain; n++)
+            {
+                GainOnePowerToken();
+            }
 		}
 
+        /* Used on gamelogic level
+         * Collect power tokens from a territory, using a consolidate token placed.
+         * */
+		public void CollectPowerFromTerritoryWithConsolidateToken(Territory T) 
+		{
+            int PowerTokensToGain = T.PowerIcons + 1;
+
+            for (int n = 0; n < PowerTokensToGain; n++) 
+            {
+                GainOnePowerToken();
+            }
+		}
+
+        /* Used on gamelogic level
+         * Remove power tokens from a players hand, and add them to the unused power token pile.
+         * */
 		public void RemovePowerTokens(int i) 
 		{
 			if (i < PowerTokens)
 			{
-				PowerTokens = PowerTokens - i;
+                for (int n = 0; n < i; n++)
+                {
+                    LoseOnePowerToken_ToUnused();
+                }
 			}
 			else 
 			{
-				PowerTokens = 0;
+                while (PowerTokens > 0) 
+                {
+                    LoseOnePowerToken_ToUnused();
+                }
 			}
 		}
+
+        /* Used on gamelogic level
+         * Add powertokens to the players hand, and remove them from the unused power token pule.
+         * */
 		public void GainPowerTokens(int i) 
 		{
 			if (i < UnusedPowerTokens)
 			{
-				PowerTokens = PowerTokens + i;
+                for (int n = 0; n < i; n++) 
+                {
+                    GainOnePowerToken();
+                }
 			}
 			else
 			{
-				PowerTokens = PowerTokens + UnusedPowerTokens;
+                for (int n = 0; n < UnusedPowerTokens; n++) 
+                {
+                    GainOnePowerToken();
+                }
 			}
 		}
 
+        /* Used on gamelogic level
+         * Upgrade a unit on a given territory. */
 		public void UpgradeUnitOnTerritory(Unit Previous, Unit Upgraded, Territory T) 
 		{
 			T.RemoveUnitFromList(Previous);
@@ -238,6 +327,7 @@ using System.Text;
 			UnusedUnits.Remove(Upgraded);
 		}
 
+        /* Create units when the game is initiated. */
         private static List<Unit> CreateUnits(House h)
         {
             List<Unit> units = new List<Unit>();
@@ -272,6 +362,8 @@ using System.Text;
 
             return units;
         }
+
+        /* Create order tokens when the game is initiated. */
         private static List<OrderToken> CreateOrderTokens(House h)
         {
 
