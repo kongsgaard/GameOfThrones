@@ -70,16 +70,43 @@ using System.Text;
 			_HouseCardHand.Add(H);
 		}
 
+        /* Used on gamelogic level
+         * Place an order token on a territory from the players hand
+         * */
 		public void PlaceOrderTokenOnTerritory(Territory T, OrderToken ot) 
 		{
 			T.PlaceOrderToken(ot);
-			UnusedOrderTokens.Remove(ot);
+			PlaceOrderToken(ot);
 		}
+
+        /* Used on gamelogic level
+         * Return an order token from a territory to the players hand
+         * */
 		public void ReturnOrderTokenFromTerritory(Territory T, OrderToken ot) 
 		{
 			T.RemoveOrderToken(ot);
-			UnusedOrderTokens.Add(ot);
+            ReturnOrderToken(ot);
 		}
+
+        /* Not used on gamelogic level
+         * 
+         * --Missing--
+         * Notify player hand class when this happens.
+         * */
+        public void ReturnOrderToken(OrderToken ot) 
+        {
+            UnusedOrderTokens.Add(ot);
+        }
+
+        /* Not used on gamelogic level
+         * 
+         * --Missing--
+         * Notify player hand class when this happens.
+         * */
+        public void PlaceOrderToken(OrderToken ot) 
+        {
+            UnusedOrderTokens.Remove(ot);
+        }
 
         /* Not used on gamelogic level.
          * Used to inform UI of changes
@@ -107,7 +134,7 @@ using System.Text;
          * If a power token should be added to the unused pile, but not removed from the player power token pile
          * 
          * --Missing--
-         * Setup 
+         * Setup and notify player hand class that power token is placed in the unused pile
          * */
         public void AddPowerTokenToUnusedPile() 
         {
