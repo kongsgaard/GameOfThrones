@@ -366,7 +366,7 @@ using System.Text;
                 units.Add(u);
             }
 
-            for (int i = 0; i < 1000; i++)
+            for (int i = 0; i < 10; i++)
             {
                 string FootmanName = "Footman_" + i.ToString() + "_" + h.HouseCharacter.ToString();
                 Unit u = new Unit(h, UnitType.Footman, true, FootmanName);

@@ -112,6 +112,8 @@ public class GameSetup : MonoBehaviour {
                     if (T.Name == "DragonstoneHarbor") { }
                 }
 
+                //GameBase.myHouse = Baratheon;
+
                 GameBase.IronThroneTrack.InsertHouseAtPosition(1, Baratheon);
                 GameBase.FeifdomTrack.InsertHouseAtPosition(5, Baratheon);
                 GameBase.KingsCourtTrack.InsertHouseAtPosition(4, Baratheon);
@@ -200,6 +202,7 @@ public class GameSetup : MonoBehaviour {
         GameBase.supplyTrack.SetSupplyForAllBasedOnTerritory();
 
         GameBase.wildlingTrack.NotifyValueChange();
+
         Destroy(this.gameObject);
 	}
 	
